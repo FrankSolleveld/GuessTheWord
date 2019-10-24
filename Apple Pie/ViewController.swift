@@ -31,12 +31,15 @@ class ViewController: UIViewController {
     // MARK: Actions
     @IBAction func buttonPressed(_ sender: UIButton) {
         sender.isEnabled = false
+        let letterString = sender.title(for: .normal)!
+        let letter = Character(letterString.lowercased())
+        currentGame.playerGuessed(letter: letter)
     }
 
     // MARK: Functions
     func newRound() {
         let newWord = listOfWords.removeFirst()
-        currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed)
+        currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed, guessedLetters: [])
         updateUI()
     }
     
@@ -46,4 +49,3 @@ class ViewController: UIViewController {
     }
  
 }
-
