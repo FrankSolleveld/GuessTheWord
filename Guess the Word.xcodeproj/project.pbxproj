@@ -26,6 +26,7 @@
 		958A9D08236174F9009D91CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958A9D0A236174F9009D91CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958A9D1023617E56009D91CC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		959CEBAC23619E1000837376 /* Guess The Word.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Guess The Word.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		958A9CFB236174F8009D91CC /* Guess the Word */ = {
 			isa = PBXGroup;
 			children = (
+				959CEBAC23619E1000837376 /* Guess The Word.entitlements */,
 				958A9CFC236174F8009D91CC /* AppDelegate.swift */,
 				958A9CFE236174F8009D91CC /* SceneDelegate.swift */,
 				958A9D1023617E56009D91CC /* Game.swift */,
@@ -288,9 +290,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Guess the Word/Guess The Word.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 2BRJ7L3SUQ;
 				INFOPLIST_FILE = "$(SRCROOT)/Guess the Word/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,6 +303,7 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.solleveld.guesstheword;
 				PRODUCT_NAME = "Guess The Word";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,9 +313,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Guess the Word/Guess The Word.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 2BRJ7L3SUQ;
 				INFOPLIST_FILE = "$(SRCROOT)/Guess the Word/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,6 +326,7 @@
 				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.solleveld.guesstheword;
 				PRODUCT_NAME = "Guess The Word";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
