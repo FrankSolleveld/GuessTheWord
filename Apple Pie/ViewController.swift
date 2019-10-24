@@ -13,8 +13,16 @@ class ViewController: UIViewController {
     // MARK: Variables
     var listOfWords: [String] = ["spaghetti", "bolognese", "apple", "samsung", "cowboy", "pleb", "iphone", "swift", "twostraws"]
     var incorrectMovesAllowed: Int = 7
-    var totalWins: Int = 0
-    var totalLosses: Int = 0
+    var totalWins: Int = 0 {
+        didSet {
+            newRound()
+        }
+    }
+    var totalLosses: Int = 0 {
+        didSet {
+            newRound()
+        }
+    }
     var currentGame: Game!
     
     // MARK: Outlets
@@ -34,7 +42,7 @@ class ViewController: UIViewController {
         let letterString = sender.title(for: .normal)!
         let letter = Character(letterString.lowercased())
         currentGame.playerGuessed(letter: letter)
-        updateUI()
+        updateGameState()
     }
 
     // MARK: Functions
@@ -53,6 +61,16 @@ class ViewController: UIViewController {
         correctWordLabel.text = wordWithSpacing
         scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
         treeImageView.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
+    }
+    
+    func updateGameState() {
+        if currentGame.incorrectMovesRemaining == 0 {
+            totalLosses += 1
+        } else if currentGame.word == currentGame.formattedWord {
+            totalWins += 1
+        } else {
+            updateUI()
+        }
     }
  
 }
