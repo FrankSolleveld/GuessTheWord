@@ -295,7 +295,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.solleveld.guesstheword;
 				PRODUCT_NAME = "Guess The Word";
 				SWIFT_VERSION = 5.0;
@@ -314,7 +313,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = nl.solleveld.guesstheword;
 				PRODUCT_NAME = "Guess The Word";
 				SWIFT_VERSION = 5.0;
